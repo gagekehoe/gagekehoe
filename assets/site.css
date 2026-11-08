@@ -143,8 +143,6 @@ body::before {
 }
 
 .site-nav ul,
-.app-nav ul,
-.footer-nav ul,
 .on-page ul {
   display: flex;
   flex-wrap: wrap;
@@ -155,8 +153,6 @@ body::before {
 }
 
 .site-nav a,
-.app-nav a,
-.footer-nav a,
 .on-page a {
   display: inline-flex;
   align-items: center;
@@ -168,8 +164,6 @@ body::before {
 }
 
 .site-nav a:hover,
-.app-nav a:hover,
-.footer-nav a:hover,
 .on-page a:hover {
   color: var(--ink);
   border-bottom-color: var(--accent-soft);
@@ -340,50 +334,6 @@ h3 {
   font-weight: 600;
   box-shadow: inset 0 0 0 1px rgba(15, 111, 99, 0.18);
   animation: soft-pulse 4.5s ease-in-out infinite;
-}
-
-.app-nav {
-  margin: 0 0 1.35rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid var(--line);
-}
-
-.policy-links {
-  list-style: none;
-  margin: 1.25rem 0 0;
-  padding: 0;
-  display: grid;
-  gap: 0.35rem;
-}
-
-.policy-links a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  min-height: 2.85rem;
-  padding: 0.35rem 0;
-  color: var(--ink);
-  text-decoration: none;
-  border-bottom: 1px solid var(--line);
-  transition: color 0.2s ease, padding-left 0.2s ease;
-}
-
-.policy-links a::after {
-  content: "→";
-  color: var(--accent);
-  transition: transform 0.2s ease;
-}
-
-.policy-links a:hover,
-.policy-links a:focus-visible {
-  color: var(--accent);
-  padding-left: 0.25rem;
-}
-
-.policy-links a:hover::after,
-.policy-links a:focus-visible::after {
-  transform: translateX(0.2rem);
 }
 
 .on-page {
