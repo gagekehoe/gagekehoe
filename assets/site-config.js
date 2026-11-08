@@ -12,7 +12,7 @@
   "use strict";
 
   var siteConfig = {
-    supportEmail: "",
+    supportEmail: "gagekehoe17@gmail.com",
     legalEntity: "",
     appleStoreUrl: "",
     playStoreUrl: ""
@@ -42,7 +42,7 @@
       node.textContent = "";
       node.appendChild(document.createTextNode("Email "));
       node.appendChild(link);
-      node.appendChild(document.createTextNode(" for help with Letter Box AAC. Include your device and the app version, and leave out your password."));
+      node.appendChild(document.createTextNode(" for help with Letter Board. Include your device and the app version, and leave out your password."));
     }
   }
 
@@ -50,7 +50,7 @@
     var nodes = document.querySelectorAll("[data-slot='legal-entity']");
     var index;
     for (index = 0; index < nodes.length; index += 1) {
-      nodes[index].textContent = name + " publishes Letter Box AAC. Gage Kehoe is the developer.";
+      nodes[index].textContent = name + " publishes Letter Board. Gage Kehoe is the developer.";
     }
   }
 
@@ -71,12 +71,12 @@
       var node = nodes[index];
       var intro = document.createElement("p");
       var list = document.createElement("ul");
-      intro.textContent = "Install Letter Box AAC from the store you use. Each link opens the public listing.";
+      intro.textContent = "Install Letter Board from the store you use. Each link opens the public listing.";
       if (apple) {
-        list.appendChild(storeItem(apple, "Letter Box AAC on the Apple App Store"));
+        list.appendChild(storeItem(apple, "Letter Board on the Apple App Store"));
       }
       if (play) {
-        list.appendChild(storeItem(play, "Letter Box AAC on Google Play"));
+        list.appendChild(storeItem(play, "Letter Board on Google Play"));
       }
       node.textContent = "";
       node.appendChild(intro);
