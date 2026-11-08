@@ -72,7 +72,7 @@ Edit the four empty strings at the top of [`assets/site-config.js`](assets/site-
 
 | Key | Replace with | What readers see while it is empty |
 | --- | --- | --- |
-| `supportEmail` | A plain support address you actually read | A support email is not listed on this page yet. Use the developer contact shown on the Apple App Store or Google Play listing for Letter Board. |
+| `supportEmail` | A plain support address you actually read | Currently set to `gagekehoe17@gmail.com`. Empty would fall back to asking readers to use the store listing contact. |
 | `legalEntity` | The company or other legal name. This is not a street address. | A company legal name is not published on this site. Gage Kehoe is the developer named for Letter Board. |
 | `appleStoreUrl` | The `https` App Store listing URL | Letter Board is being prepared for the Apple App Store and Google Play. This page is the marketing address for both listings. Listing links are not published here yet. |
 | `playStoreUrl` | The `https` Google Play listing URL | Same sentence as the Apple link, until either store URL is set. |

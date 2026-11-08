@@ -12,7 +12,7 @@
   "use strict";
 
   var siteConfig = {
-    supportEmail: "",
+    supportEmail: "gagekehoe17@gmail.com",
     legalEntity: "",
     appleStoreUrl: "",
     playStoreUrl: ""
