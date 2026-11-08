@@ -1,10 +1,10 @@
 # Gage Kehoe apps
 
-Public pages for apps that do not need their own marketing site. The only app today is [Letter Box AAC](letter-box/).
+Public pages for apps that do not need their own marketing site. The only app today is [Letter Board](letter-board/).
 
-The site is static HTML, CSS, self-hosted fonts, and one small script. There is no build step and no server to run in production. Internal links are root-relative (`/letter-box/`, `/assets/site.css`). The base path is `/`, the root of the domain, which is how a custom domain on GitHub Pages serves this folder.
+The site is static HTML, CSS, self-hosted fonts, and one small script. There is no build step and no server to run in production. Internal links are root-relative (`/letter-board/`, `/assets/site.css`). The base path is `/`, the root of the domain, which is how a custom domain on GitHub Pages serves this folder.
 
-Home (`/`) is only the list of apps. Each app’s overview, support, privacy, terms, and deletion pages live under that app’s folder.
+Home (`/`) is the list of apps. Each app’s overview, support, privacy, terms, and deletion pages live under that app’s folder. The App Store Support URL for Letter Board is `https://www.gagekehoe.com`.
 
 ## Run locally
 
@@ -30,22 +30,20 @@ The store consoles should use the custom domain below, not `https://gagekehoe.gi
 
 ## Custom domain
 
-Replace `YOUR-DOMAIN` with the hostname you own. This file does not name one.
-
-Tell GitHub the hostname in one of these ways. Either one writes a `CNAME` file at the publishing root, next to `index.html`.
+The Support URL for Letter Board is `https://www.gagekehoe.com`. Tell GitHub the hostname in one of these ways. Either one writes a `CNAME` file at the publishing root, next to `index.html`.
 
 - Add a file named `CNAME` in this folder. One line, the hostname only, no `https://`:
 
   ```
-  YOUR-DOMAIN
+  www.gagekehoe.com
   ```
 
-- Or, on Settings → Pages, enter `YOUR-DOMAIN` in Custom domain and save. Leave the `CNAME` file GitHub commits. The file holds one hostname.
+- Or, on Settings → Pages, enter `www.gagekehoe.com` in Custom domain and save. Leave the `CNAME` file GitHub commits. The file holds one hostname.
 
 DNS, at the registrar. For this repository the GitHub host is `gagekehoe.github.io`.
 
-- Apex (`YOUR-DOMAIN`): four `A` records on `@` — `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`. For IPv6, four `AAAA` records on `@` — `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`.
-- A subdomain such as `www.YOUR-DOMAIN`: a `CNAME` record for that host, pointing at `gagekehoe.github.io`.
+- Apex (`gagekehoe.com`): four `A` records on `@` — `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`. For IPv6, four `AAAA` records on `@` — `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`.
+- The Support URL host `www.gagekehoe.com`: a `CNAME` record for `www`, pointing at `gagekehoe.github.io`.
 
 The hostname in `CNAME` is the one the site answers as. Point any other hostname at the same records if it should redirect there.
 
@@ -53,20 +51,20 @@ HTTPS: after DNS matches those records, GitHub requests a certificate. When Sett
 
 ## URL map
 
-Paste `https://YOUR-DOMAIN` plus the path into App Store Connect and Play Console.
+Paste `https://www.gagekehoe.com` plus the path into App Store Connect and Play Console.
 
 | Use | Path | File |
 | --- | --- | --- |
-| Home, the list of apps | `/` | `index.html` |
-| Letter Box AAC marketing URL (App Store) and listing link (Play) | `/letter-box/` | `letter-box/index.html` |
-| Support URL (Apple and Google) | `/letter-box/support/` | `letter-box/support/index.html` |
-| Privacy policy URL (Apple and Google) | `/letter-box/privacy/` | `letter-box/privacy/index.html` |
-| Terms of use | `/letter-box/terms/` | `letter-box/terms/index.html` |
-| Account and data deletion URL (Google Play) | `/letter-box/delete-account/` | `letter-box/delete-account/index.html` |
+| Home / App Store Support URL | `/` | `index.html` |
+| Letter Board marketing URL (App Store) and listing link (Play) | `/letter-board/` | `letter-board/index.html` |
+| Detailed support | `/letter-board/support/` | `letter-board/support/index.html` |
+| Privacy policy URL (Apple and Google) | `/letter-board/privacy/` | `letter-board/privacy/index.html` |
+| Terms of use | `/letter-board/terms/` | `letter-board/terms/index.html` |
+| Account and data deletion URL (Google Play) | `/letter-board/delete-account/` | `letter-board/delete-account/index.html` |
 
-Pages also answers `/letter-box` without the trailing slash. Point the store consoles at `https://YOUR-DOMAIN/letter-box/` and the other directory URLs.
+Pages also answers `/letter-board` without the trailing slash. Point the store consoles at `https://www.gagekehoe.com/letter-board/` and the other directory URLs when a path is required. The App Store Support URL itself is `https://www.gagekehoe.com`.
 
-No public Letter Box AAC listing was available to quote, so the pages describe the app in general terms. Match this privacy policy to the App Store privacy labels and the Play Data safety form when you fill those in.
+Letter Board does not require an account and does not collect personal data. Speak uses on-device text-to-speech. Match this privacy policy to the App Store privacy labels and the Play Data safety form when you fill those in.
 
 ## Strings to personalize
 
@@ -74,19 +72,19 @@ Edit the four empty strings at the top of [`assets/site-config.js`](assets/site-
 
 | Key | Replace with | What readers see while it is empty |
 | --- | --- | --- |
-| `supportEmail` | A plain support address you actually read | A support email is not listed on this page yet. Use the developer contact shown on the Apple App Store or Google Play listing for Letter Box AAC. |
-| `legalEntity` | The company or other legal name. This is not a street address. | A company legal name is not published on this site. Gage Kehoe is the developer named for Letter Box AAC. |
-| `appleStoreUrl` | The `https` App Store listing URL | Letter Box AAC is being prepared for the Apple App Store and Google Play. This page is the marketing address for both listings. Listing links are not published here yet. |
+| `supportEmail` | A plain support address you actually read | A support email is not listed on this page yet. Use the developer contact shown on the Apple App Store or Google Play listing for Letter Board. |
+| `legalEntity` | The company or other legal name. This is not a street address. | A company legal name is not published on this site. Gage Kehoe is the developer named for Letter Board. |
+| `appleStoreUrl` | The `https` App Store listing URL | Letter Board is being prepared for the Apple App Store and Google Play. This page is the marketing address for both listings. Listing links are not published here yet. |
 | `playStoreUrl` | The `https` Google Play listing URL | Same sentence as the Apple link, until either store URL is set. |
 
 A mailing address is intentionally absent. Do not invent one.
 
-The deletion page says requests are completed within 30 days. That sentence is in `letter-box/delete-account/index.html`, under “How long it takes,” if you want a different timeline.
+The deletion page explains that Letter Board has no publisher account to close. On-device content is removed with Clear or by deleting the app.
 
 Have a lawyer read the privacy policy and terms before you rely on them.
 
 ## Add another app
 
-On the home page, copy one `<li class="app-card">` inside `<ol class="app-list">` in `index.html`. That card is the whole home-page change.
+On the home page, copy one `<li>` inside `<ol class="app-list">` in `index.html`. That row is the whole home-page change.
 
-Then copy the `letter-box/` folder as the page pattern (overview, support, privacy, terms, delete-account), and add one `<li>` for the new app in the site header on each page. The header comment marks that list.
+Then copy the `letter-board/` folder as the page pattern (overview, support, privacy, terms, delete-account), and add matching nav links on each page. The header comment marks that list.
