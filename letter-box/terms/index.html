@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self'; script-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self'; script-src 'self'; font-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'">
   <title>Terms of use · Letter Box AAC</title>
   <meta name="description" content="Terms of use for Letter Box AAC and this website.">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -12,13 +12,9 @@
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
-  <div class="sheet">
-    <header class="site-header letterhead">
-      <div class="brand-row">
-        <a class="brand" href="/">Gage Kehoe</a>
-        <p class="brand-note">Apps and their public pages</p>
-      </div>
-      <!-- App links: add one <li> here per app. -->
+  <div class="frame">
+    <header class="site-header">
+      <a class="brand" href="/">Gage Kehoe</a>
       <nav class="site-nav" aria-label="Site">
         <ul>
           <li><a href="/">Apps</a></li>
@@ -27,10 +23,13 @@
       </nav>
     </header>
     <main id="content" tabindex="-1">
-
       <nav class="app-nav" aria-label="Letter Box AAC pages">
         <ul>
-          <li><a href="/letter-box/">Overview</a></li><li><a href="/letter-box/support/">Support</a></li><li><a href="/letter-box/privacy/">Privacy</a></li><li><a href="/letter-box/terms/" aria-current="page">Terms</a></li><li><a href="/letter-box/delete-account/">Delete account</a></li>
+          <li><a href="/letter-box/">Overview</a></li>
+          <li><a href="/letter-box/support/">Support</a></li>
+          <li><a href="/letter-box/privacy/">Privacy</a></li>
+          <li><a href="/letter-box/terms/" aria-current="page">Terms</a></li>
+          <li><a href="/letter-box/delete-account/">Delete account</a></li>
         </ul>
       </nav>
       <h1>Terms of use</h1>
@@ -76,7 +75,6 @@
 
       <h2>Contact</h2>
       <p data-slot="support">A support email is not listed on this page yet. Use the developer contact shown on the Apple App Store or Google Play listing for Letter Box AAC.</p>
-
     </main>
     <footer class="site-footer">
       <nav class="footer-nav" aria-label="Letter Box AAC">
@@ -90,7 +88,7 @@
       </nav>
       <p data-slot="support">A support email is not listed on this page yet. Use the developer contact shown on the Apple App Store or Google Play listing for Letter Box AAC.</p>
       <p data-slot="legal-entity">A company legal name is not published on this site. Gage Kehoe is the developer named for Letter Box AAC.</p>
-      <p class="colophon">These pages are static files. They load no tracking scripts and no third-party fonts.</p>
+      <p class="colophon">Static pages. No tracking scripts. Fonts are self-hosted.</p>
     </footer>
   </div>
   <script src="/assets/site-config.js"></script>

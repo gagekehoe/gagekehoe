@@ -2,7 +2,9 @@
 
 Public pages for apps that do not need their own marketing site. The only app today is [Letter Box AAC](letter-box/).
 
-The site is static HTML, CSS, and one small script. There is no build step and no server to run in production. Internal links are root-relative (`/letter-box/`, `/assets/site.css`). The base path is `/`, the root of the domain, which is how a custom domain on GitHub Pages serves this folder.
+The site is static HTML, CSS, self-hosted fonts, and one small script. There is no build step and no server to run in production. Internal links are root-relative (`/letter-box/`, `/assets/site.css`). The base path is `/`, the root of the domain, which is how a custom domain on GitHub Pages serves this folder.
+
+Home (`/`) is only the list of apps. Each app’s overview, support, privacy, terms, and deletion pages live under that app’s folder.
 
 ## Run locally
 

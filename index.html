@@ -4,61 +4,44 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self'; script-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self'; script-src 'self'; font-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'">
   <title>Apps · Gage Kehoe</title>
-  <meta name="description" content="Public pages for apps Gage Kehoe publishes, including Letter Box AAC.">
+  <meta name="description" content="Apps published by Gage Kehoe.">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
-  <div class="sheet">
-    <header class="site-header letterhead">
-      <div class="brand-row">
-        <a class="brand" href="/">Gage Kehoe</a>
-        <p class="brand-note">Apps and their public pages</p>
-      </div>
-      <!-- App links: add one <li> here per app. -->
+  <div class="frame">
+    <header class="site-header">
+      <a class="brand" href="/">Gage Kehoe</a>
       <nav class="site-nav" aria-label="Site">
         <ul>
           <li><a href="/" aria-current="page">Apps</a></li>
-          <li><a href="/letter-box/">Letter Box AAC</a></li>
         </ul>
       </nav>
     </header>
     <main id="content" tabindex="-1">
-
-      <p class="tiles" aria-hidden="true"><span>G</span><span>K</span></p>
-      <h1>Apps</h1>
-      <p class="lede">Public pages for the apps Gage Kehoe publishes. Each app has a home, and the support, privacy, terms, and deletion pages families, clinicians, and the stores can open.</p>
-      <!--
-        Adding an app: copy one <li class="app-card"> block inside this list.
-        Then add a folder of pages, following letter-box/, and add one link
-        in the site header on each page.
-      -->
-      <ol class="app-list">
-        <li class="app-card">
-          <p class="kicker">Communication</p>
-          <h2><a href="/letter-box/">Letter Box AAC</a></h2>
-          <p>An augmentative and alternative communication app for the person communicating, and for the families and clinicians beside them.</p>
-          <ul class="page-links" aria-label="Letter Box AAC pages">
-            <li><a href="/letter-box/">Overview</a></li>
-            <li><a href="/letter-box/support/">Support</a></li>
-            <li><a href="/letter-box/privacy/">Privacy</a></li>
-            <li><a href="/letter-box/terms/">Terms</a></li>
-            <li><a href="/letter-box/delete-account/">Delete account</a></li>
-          </ul>
-        </li>
-      </ol>
-
+      <section class="home-hero" aria-labelledby="apps-heading">
+        <div>
+          <p class="eyebrow">Publisher</p>
+          <h1 id="apps-heading">Apps</h1>
+          <p class="lede">Public pages for the apps Gage Kehoe publishes. Open an app for its overview, support, and store-required policies.</p>
+        </div>
+        <!-- Adding an app: copy one <li> with an .app-row link, then add a folder like letter-box/. -->
+        <ol class="app-list">
+          <li>
+            <a class="app-row" href="/letter-box/">
+              <p class="name">Letter Box AAC <span class="chevron" aria-hidden="true">→</span></p>
+              <p class="blurb">A communication app for the person speaking, and for the people beside them.</p>
+            </a>
+          </li>
+        </ol>
+      </section>
     </main>
     <footer class="site-footer">
-      
-      <p data-slot="support">A support email is not listed on this page yet. Use the developer contact shown on the Apple App Store or Google Play listing for Letter Box AAC.</p>
-      <p data-slot="legal-entity">A company legal name is not published on this site. Gage Kehoe is the developer named for Letter Box AAC.</p>
-      <p class="colophon">These pages are static files. They load no tracking scripts and no third-party fonts.</p>
+      <p class="colophon">Static pages. No tracking scripts. Fonts are self-hosted.</p>
     </footer>
   </div>
-  <script src="/assets/site-config.js"></script>
 </body>
 </html>
